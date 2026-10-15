@@ -1,0 +1,115 @@
+[
+  {
+    "property": "zen.topbartweaks.show-when-not-at-top",
+    "label": "Keep the top bar open when the window isn't touching the top of the screen",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "type": "separator",
+    "label": "Popping up"
+  },
+  {
+    "property": "zen.topbartweaks.show-delay",
+    "label": "Wait before it pops up",
+    "type": "dropdown",
+    "defaultValue": "default",
+    "placeholder": false,
+    "options": [
+      {
+        "label": "Zen default",
+        "value": "default"
+      },
+      {
+        "label": "Instantly",
+        "value": "0"
+      },
+      {
+        "label": "0.1 seconds",
+        "value": "100"
+      },
+      {
+        "label": "0.25 seconds",
+        "value": "250"
+      },
+      {
+        "label": "0.5 seconds",
+        "value": "500"
+      },
+      {
+        "label": "0.75 seconds",
+        "value": "750"
+      },
+      {
+        "label": "1 second",
+        "value": "1000"
+      }
+    ]
+  },
+  {
+    "property": "zen.topbartweaks.trigger-range",
+    "label": "How close to the top the mouse has to be",
+    "type": "dropdown",
+    "defaultValue": "default",
+    "placeholder": false,
+    "options": [
+      {
+        "label": "Zen default (top 8 px)",
+        "value": "default"
+      },
+      {
+        "label": "Very top only (1 px)",
+        "value": "1"
+      },
+      {
+        "label": "3 px",
+        "value": "3"
+      },
+      {
+        "label": "15 px",
+        "value": "15"
+      },
+      {
+        "label": "25 px",
+        "value": "25"
+      },
+      {
+        "label": "40 px",
+        "value": "40"
+      },
+      {
+        "label": "60 px",
+        "value": "60"
+      },
+      {
+        "label": "100 px",
+        "value": "100"
+      }
+    ]
+  },
+  {
+    "property": "zen.topbartweaks.animation",
+    "label": "Slide animation",
+    "type": "dropdown",
+    "defaultValue": "default",
+    "placeholder": false,
+    "options": [
+      {
+        "label": "Zen default",
+        "value": "default"
+      },
+      {
+        "label": "No animation",
+        "value": "0"
+      },
+      {
+        "label": "Fast",
+        "value": "0.08"
+      },
+      {
+        "label": "Slow",
+        "value": "0.3"
+      }
+    ]
+  }
+]
