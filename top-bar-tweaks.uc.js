@@ -215,9 +215,12 @@
   function topRightPage() {
     let best = null;
     let bestRect = null;
-    for (const page of gBrowser.tabpanels.querySelectorAll(":scope > .browserSidebarContainer")) {
+    // Pages of background tabs sit stacked behind, looking just as "visible",
+    // so only count the one on screen (or the ones in a split view).
+    const shown = ':scope > .browserSidebarContainer:is(.deck-selected, [zen-split="true"])';
+    for (const page of gBrowser.tabpanels.querySelectorAll(shown)) {
       const rect = page.getBoundingClientRect();
-      if (!rect.width || !rect.height || getComputedStyle(page).visibility === "hidden") {
+      if (!rect.width || !rect.height) {
         continue;
       }
       if (!bestRect || rect.top < bestRect.top - 1 || (Math.abs(rect.top - bestRect.top) <= 1 && rect.right > bestRect.right)) {
