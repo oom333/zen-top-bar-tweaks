@@ -10,6 +10,23 @@
     "label": "Popping up"
   },
   {
+    "property": "zen.topbartweaks.style",
+    "label": "What pops up",
+    "type": "dropdown",
+    "defaultValue": "bar",
+    "placeholder": false,
+    "options": [
+      {
+        "label": "The whole bar",
+        "value": "bar"
+      },
+      {
+        "label": "Just the window buttons",
+        "value": "buttons"
+      }
+    ]
+  },
+  {
     "property": "zen.topbartweaks.show-delay",
     "label": "Wait before it pops up",
     "type": "dropdown",

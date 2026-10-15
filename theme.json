@@ -1,13 +1,13 @@
 {
   "id": "zen-top-bar-tweaks",
   "name": "Top Bar Tweaks",
-  "description": "Keeps Zen's hidden top bar open when the window isn't touching the top of the screen, and lets you set how fast and from how far away it pops up.",
+  "description": "Keeps Zen's hidden top bar open when the window isn't touching the top of the screen, can roll down just the window buttons, and lets you set how fast and from how far away it pops up.",
   "homepage": "https://github.com/oom333/zen-top-bar-tweaks",
   "style": "chrome.css",
   "readme": "README.md",
   "preferences": "preferences.json",
   "author": "oom333",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "tags": [
     "toolbar",
     "window",
@@ -18,7 +18,7 @@
   ],
   "ai": "yes",
   "createdAt": "2026-10-15",
-  "updatedAt": "2026-10-15T04:14:48Z",
+  "updatedAt": "2026-10-15T05:00:12Z",
   "scripts": {
     "top-bar-tweaks.uc.js": {
       "include": [

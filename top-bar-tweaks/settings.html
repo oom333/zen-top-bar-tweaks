@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top Bar Tweaks settings</title>
+  <link rel="stylesheet" href="settings.css">
+  <script src="settings.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <h1>Top Bar Tweaks</h1>
+      <p>Choose how Zen's hidden top bar (the one with the minimize, maximize and close buttons) pops up. Changes apply right away.</p>
+    </header>
+
+    <section class="card try">
+      <div class="card-head">
+        <h2>Try it</h2>
+        <p class="muted">Move your mouse to the top of this little window. It uses your settings below.</p>
+      </div>
+      <div class="demo-wrap">
+        <div class="demo" id="demo">
+          <div class="demo-range" id="demo-range"><span id="demo-range-label"></span></div>
+          <div class="demo-sidebar">
+            <i></i><i></i><i class="on"></i><i></i>
+          </div>
+          <div class="demo-page" id="demo-page">
+            <div class="demo-site">
+              <b></b><span></span>
+            </div>
+            <div class="demo-lines"><i></i><i></i><i></i></div>
+          </div>
+          <div class="demo-bar" id="demo-bar">
+            <div class="demo-buttons" id="demo-buttons">
+              <span class="min"></span><span class="max"></span><span class="close"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Pop-up style</h2>
+        <p class="muted">What slides down when your mouse reaches the top.</p>
+      </div>
+      <div class="choices" id="style">
+        <button class="choice" type="button" data-value="bar">
+          <span class="mini" data-mini="bar"><span class="mini-page"></span><span class="mini-bar"></span><span class="mini-btns"><span class="min"></span><span class="max"></span><span class="close"></span></span></span>
+          <span class="choice-text"><b>Whole bar</b><span>Zen's normal look. The full strip across the top drops down.</span></span>
+        </button>
+        <button class="choice" type="button" data-value="buttons">
+          <span class="mini" data-mini="buttons"><span class="mini-page"></span><span class="mini-btns"><span class="min"></span><span class="max"></span><span class="close"></span></span></span>
+          <span class="choice-text"><b>Just the window buttons</b><span>Only the three buttons roll down in the corner. The rest of the edge stays thin.</span></span>
+        </button>
+      </div>
+      <p class="note">"Just the window buttons" works with Zen's usual layout. If you show bookmarks in the top bar, or the bar is kept open (below), the whole bar is used.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>When the window isn't at the top of the screen</h2>
+        <p class="muted">A small or moved window can't be reached by flinging the mouse to the top of the screen.</p>
+      </div>
+      <label class="switch-row">
+        <span>
+          <b>Keep the top bar open</b>
+          <span class="muted">Hides as usual when the window is maximized or snapped to half the screen.</span>
+        </span>
+        <input type="checkbox" id="pin" class="switch">
+      </label>
+      <div class="screens">
+        <figure>
+          <div class="screen"><div class="win top"><span class="win-bar"></span></div><div class="win top second"></div></div>
+          <figcaption>Touching the top: hides</figcaption>
+        </figure>
+        <figure>
+          <div class="screen"><div class="win floating" id="floating-win"><span class="win-bar"></span></div></div>
+          <figcaption id="floating-caption">Floating: stays open</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Timing</h2>
+      </div>
+      <div class="field">
+        <div class="field-label"><b>Wait before it pops up</b><span class="muted">A short wait stops it popping up when your mouse just passes by.</span></div>
+        <div class="chips" id="show-delay">
+          <button type="button" data-value="default">Zen default</button>
+          <button type="button" data-value="0">Instantly</button>
+          <button type="button" data-value="100">0.1 s</button>
+          <button type="button" data-value="250">0.25 s</button>
+          <button type="button" data-value="500">0.5 s</button>
+          <button type="button" data-value="750">0.75 s</button>
+          <button type="button" data-value="1000">1 s</button>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label"><b>Slide animation</b></div>
+        <div class="chips" id="animation">
+          <button type="button" data-value="default">Zen default</button>
+          <button type="button" data-value="0">None</button>
+          <button type="button" data-value="0.08">Fast</button>
+          <button type="button" data-value="0.3">Slow</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Trigger range</h2>
+        <p class="muted">How close to the top the mouse has to be. Shown as the tinted band in the preview above.</p>
+      </div>
+      <div class="chips" id="trigger-range">
+        <button type="button" data-value="default">Zen default (8 px)</button>
+        <button type="button" data-value="1">Very top (1 px)</button>
+        <button type="button" data-value="3">3 px</button>
+        <button type="button" data-value="15">15 px</button>
+        <button type="button" data-value="25">25 px</button>
+        <button type="button" data-value="40">40 px</button>
+        <button type="button" data-value="60">60 px</button>
+        <button type="button" data-value="100">100 px</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <button id="reset" class="button" type="button">Reset to defaults</button>
+      <span class="muted" id="saved" aria-live="polite"></span>
+    </footer>
+  </main>
+</body>
+</html>

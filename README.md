@@ -10,11 +10,14 @@ This mod fixes that, and lets you tune how the bar pops up.
 
 - **Stays open when the window isn't at the top of the screen.** Drag the window down a bit, or make it small, and the top bar stays visible so you can always move the window and reach the buttons. The page moves down below the bar instead of being covered.
 - **Hides as usual when the window touches the top.** That covers maximized windows and Windows split screen (snapping Zen to one half), so nothing changes there.
+- **Just the window buttons (optional).** Instead of the whole bar, only the minimize / maximize / close buttons roll down in the top-right corner. The page gets a matching rounded cut-out around them, so it looks like part of Zen.
 - **Pop-up delay.** Make the bar show up instantly, or wait a moment so it doesn't pop up every time your mouse passes by.
 - **Trigger range.** Choose how close to the top your mouse has to be, from the very top pixel up to 100 px.
 - **Animation speed.** No animation, fast, Zen's default, or slow.
 
 Everything is off or set to Zen's own behavior by default, except "stays open when the window isn't at the top".
+
+"Just the window buttons" works with Zen's usual layout (one toolbar, window buttons in the top bar). If your top bar also shows bookmarks, or it's being kept open because the window isn't at the top, the whole bar is used.
 
 ## Install
 
@@ -31,15 +34,16 @@ Everything is off or set to Zen's own behavior by default, except "stays open wh
 ### Manually (fx-autoconfig)
 
 1. Set up [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig) in Zen.
-2. Copy `top-bar-tweaks.uc.js` into your profile's `chrome/JS/` folder. Find your profile folder in `about:support` → **Profile Folder**.
+2. Copy `top-bar-tweaks.uc.js` **and** the `top-bar-tweaks` folder (the settings page) into your profile's `chrome/JS/` folder. Find your profile folder in `about:support` → **Profile Folder**.
 3. In `about:support`, click **Clear startup cache…**, then restart Zen.
 
 ## Settings
 
-In **Settings → Sine Mods**, click the settings button on Top Bar Tweaks. Changes apply right away, with no restart needed.
+In **Settings → Sine Mods**, click the settings button on Top Bar Tweaks, or right-click the top bar and pick **Top Bar Tweaks settings…**. The settings page has a small live preview you can hover to try your settings. Changes apply right away, with no restart needed.
 
 | Setting | Default |
 | --- | --- |
+| Pop-up style: whole bar or just the window buttons | Whole bar |
 | Keep the top bar open when the window isn't touching the top of the screen | On |
 | Wait before it pops up | Zen default |
 | How close to the top the mouse has to be | Zen default (top 8 px) |
@@ -50,6 +54,7 @@ Without Sine, set these in `about:config`:
 | Pref | Type | Values |
 | --- | --- | --- |
 | `zen.topbartweaks.show-when-not-at-top` | boolean | `true` / `false` |
+| `zen.topbartweaks.style` | string | `bar` or `buttons` |
 | `zen.topbartweaks.show-delay` | string | `default`, or milliseconds like `250` |
 | `zen.topbartweaks.trigger-range` | string | `default`, or pixels from the top like `40` |
 | `zen.topbartweaks.animation` | string | `default`, or seconds like `0.08` (`0` = none) |
